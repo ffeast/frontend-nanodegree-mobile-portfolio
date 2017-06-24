@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- 92/100 on google page speed with gzip/expires/html minified (see index.min.html) -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +8,14 @@
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
+    <!--
+    this can be inlined, i.e. mod_page_speed can do this
+    https://modpagespeed.com/doc/filter-css-inline-google-fonts
+    this tick needs to be used with extreme care and wise caching on frontend server's side
+    then google page speed would rate the page 98/100 (desktop) and 97/100 (mobile)
+    complaining only on low analytics.js expiration time and (sometimes) on slow download time
+    caused by ngrok proxy
+    -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
     <!--
